@@ -1,8 +1,4 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-contract HashMatrix {
-    // Struct to store hash data and metadata
+Struct to store hash data and metadata
     struct HashEntry {
         bytes32 dataHash;
         address owner;
@@ -10,10 +6,7 @@ contract HashMatrix {
         uint256 timestamp;
     }
 
-    // Mapping for 2D matrix: row => column => HashEntry
-    mapping(uint256 => mapping(uint256 => HashEntry)) private matrix;
-
-    // Event emitted when a new hash is added
+    Event emitted when a new hash is added
     event HashAdded(uint256 indexed row, uint256 indexed column, bytes32 dataHash, address indexed owner, string metadataURI);
 
     // Event emitted when a hash entry is updated
@@ -75,3 +68,6 @@ contract HashMatrix {
         return (entry.owner != address(0) && entry.dataHash == dataHash);
     }
 }
+// 
+End
+// 
