@@ -11,6 +11,7 @@ Struct to store hash data and metadata
 
     End
 End
+End
 // 
 // 
 End
